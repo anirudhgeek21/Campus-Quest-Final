@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ImageBackground, StyleSheet, Dimensions, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ImageBackground, StyleSheet, Dimensions, Image, SafeAreaView } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ScrollView, motify } from 'moti';
 import { styled } from 'nativewind';
 
@@ -9,7 +10,6 @@ import GoogleLogo from '../../assets/background/gmail-logo.png';
 import AppleLogo from '../../assets/background/apple-logo.png';
 import FacebookLogo from '../../assets/background/facebook-logo.png';
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { KeyboardAvoidingView } from 'react-native-web';
 
 const Container = motify(View)();
@@ -21,92 +21,75 @@ const LogoImage = motify(Image)();
 
 const SignupScreen = ({navigation}) => {
   const handleSignup = () => {
-    console.log('Signup button pressed');
+    // console.log('Signup button pressed');
   };
 
   return (
     <SafeAreaProvider>
-    <ScrollView contentContainerStyle={styles.container}>
-    <ImageBackground
-      source={BackgroundImage2}
-      style={styles.backgroundImage}
-    >
-      <Container className='flex-1 p-4 bg-transparent justify-around'>
-        <Container className="my-auto flex h-[50%]">
-          <Text className='text-white text-4xl font-extrabold my-auto text-center mx-10 mt-20'>
-            Welcome to Campus Quest
-          </Text>
-          <Text className='text-white text-xl font-thin my-auto text-center mx-10 mt-[-150px]'>
-            Your next adventure and fun place
-          </Text>
-        </Container>
+    <SafeAreaView className="flex-1 bg-black">
+  <View className="mt-[20%]">
+        <Text className='text-white text-5xl font-extrabold text-center my-[5%]'>
+          Welcome to Campus Quest
+        </Text>
+        <Text className='text-white text-xl font-thin text-center mt-[5%]'>
+          Your next adventure and fun place
+        </Text>
+  </View>
 
-        <Container className="mx-3 flex-1 justify-center mt-[-16px]">
-          <InputField
-            className='bg-gray-950 text-white p-4 mb-3 rounded-lg'
-            placeholder="Enter your full name"
-            placeholderTextColor="#888888"
-            keyboardType="default"
-            autoCapitalize="words"
-            autoCompleteType="name"
-          />
+  <View className="mt-[20%] mx-[10%]">
+    <TextInput className='bg-gray-800 text-white p-4 mb-3 rounded-lg'
+          placeholder="Enter your username"
+          placeholderTextColor="#888888"
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCompleteType="email"/>
+    <TextInput className='bg-gray-800 text-white p-4 mb-3 rounded-lg'
+          placeholder="Enter your email"
+          placeholderTextColor="#888888"
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCompleteType="email"/>
+    <TextInput  className='bg-gray-800 text-white p-4 mb-3 rounded-lg'
+          placeholder="Create a password"
+          placeholderTextColor="#888888"
+          secureTextEntry={true}
+          autoCompleteType="password" />
+    <SignupButton
+          onPress={handleSignup}
+          className='bg-blue-700 p-4 py-3 rounded-lg items-center'
+          animate={{
+            scale: 1,
+            opacity: 1,
+            translateY: 0,
+          }}
+          transition={{
+            type: 'spring',
+            duration: 500,
+          }}
+        >
+          <ButtonText className='text-white text-lg font-bold'>
+            Signup
+          </ButtonText>
+        </SignupButton>
+  </View>
 
-          <InputField
-            className='bg-gray-950 text-white p-4 mb-3 rounded-lg'
-            placeholder="Enter your email"
-            placeholderTextColor="#888888"
-            keyboardType="email-address"
-            autoCapitalize="none"
-            autoCompleteType="email"
-          />
+  <View className="mx-auto mt-[10%]">
+    <Text className="text-white text-lg font-thin mb-2 mx-auto">Or login using</Text>
+    <View className="flex-row">
+              <LogoImage source={GoogleLogo} style={styles.logo} />
+              <LogoImage source={AppleLogo} style={styles.logo} />
+              <LogoImage source={FacebookLogo} style={styles.logo} />
+    </View>
+  </View>
+  
 
-          <InputField
-            className='bg-gray-950 text-white p-4 mb-3 rounded-lg'
-            placeholder="Create a password"
-            placeholderTextColor="#888888"
-            secureTextEntry={true}
-            autoCompleteType="password"
-          />
-
-          <SignupButton
-            onPress={() => {navigation.navigate("HomeScreen")}}
-            className='bg-blue-700 p-4 py-3 rounded-lg items-center'
-            animate={{
-              scale: 1,
-              opacity: 1,
-              translateY: 0,
-            }}
-            transition={{
-              type: 'spring',
-              duration: 500,
-            }}
-          >
-            <ButtonText className='text-white text-lg font-bold'>
-              Signup
-            </ButtonText>
-          </SignupButton>
-
-          <Container className="flex-1 justify-center items-center mt-12">
-            <Text className="text-white text-lg font-thin">Or sign up using</Text>
-            <View className="flex-row justify-around mt-9">
-                <LogoImage source={GoogleLogo} style={styles.logo} />
-                <LogoImage source={AppleLogo} style={styles.logo} />
-                <LogoImage source={FacebookLogo} style={styles.logo} />
-            </View>
-          </Container>
-        </Container>
-
-
-
-        <Container className="my-auto flex justify-around h-[30%] mt-5 mb-[-50]">
-          <Text className='text-white text-xl font-thin my-auto text-center mx-10'>
-            Already a user ? <Text className="text-blue-400" onPress={() => {navigation.navigate("Login")}}>Login</Text> 
-          </Text>
-        </Container>
-      </Container>
-    </ImageBackground>
-    </ScrollView>
-    </SafeAreaProvider>
+  <View className="mt-2 mx-auto">
+        <Text className='text-white text-xl font-thin text-center'>
+          Already a user ? <Text className="text-blue-400" onPress={() => {navigation.navigate("Login")}}>Login</Text> 
+        </Text>
+      </View>
+  </SafeAreaView>
+  </SafeAreaProvider>
   );
 };
 
