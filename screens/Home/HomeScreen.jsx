@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     },
     horizontalScrollContainer: {
         flexDirection: 'row',
-        paddingHorizontal: 16,
+        paddingHorizontal: 0,
     },
 });
 
