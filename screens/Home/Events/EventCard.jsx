@@ -1,19 +1,37 @@
 import React from "react";
-import { View , Text , TouchableOpacity} from "react-native";
+import { View, Text } from "react-native";
 import { styled } from 'nativewind';
 import { motify } from 'moti';
 
-const StyledButton = styled(TouchableOpacity);
-const MotiButton = motify(StyledButton)();
+const MotiView = motify(View)();
 
-const EventCard = () =>{
-    return(
-        <View>
-            <View className="justify-start bg-black w-[90%] mx-auto p-8 mt-5 rounded-2xl">
-                <Text className="text-white text-4xl font-thin font-sans tracking-widest px-7 pb-2">Events</Text>
+const EventCard = (prop) => {
+    return (
+        <MotiView
+            className="flex justify-around"
+            from={{
+                opacity: 0,
+                translateY: -50,
+            }}
+            animate={{
+                opacity: 1,
+                translateY: 0,
+            }}
+            transition={{
+                type: 'timing',
+                duration: 1000,
+            }}
+        >
+            <Text className="text-blue-100 text-center font-extrabold -tracking-[0.3px] text-xl">{prop.name}</Text>
+            <View className="w-[40%] mx-auto flex flex-row justify-around mt-3">
+                <View style={{ width: 30, height: 30, backgroundColor: 'gold', borderRadius: 25 }} />
+                <View style={{ width: 30, height: 30, backgroundColor: 'silver', borderRadius: 25 }} />
+                <View style={{ width: 30, height: 30, backgroundColor: '#CD7F32', borderRadius: 25 }} />
             </View>
-        </View>
-    )
+            <Text className="text-white font-thin text-center mt-4">{prop.time}</Text>
+            <Text className="text-white font-thin text-center mt-1 mb-2">{prop.location}</Text>
+        </MotiView>
+    );
 }
 
 export default EventCard;
