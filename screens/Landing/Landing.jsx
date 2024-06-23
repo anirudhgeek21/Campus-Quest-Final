@@ -36,8 +36,8 @@ const LandingPage = ({navigation}) => {
 
 
         <NextButton
-            onPress={() => {navigation.navigate("Login")}}
-            className='bg-white p-2 mb-16 rounded-lg items-center w-[80%] mx-auto'
+            onPress={() => {navigation.navigate("LoginScreen")}}
+            className='bg-blue-700 p-2 mb-16 rounded-lg items-center w-[80%] mx-auto'
             animate={{
               scale: 1,
               opacity: 1,
@@ -48,7 +48,7 @@ const LandingPage = ({navigation}) => {
               duration: 500,
             }}
           >
-            <ButtonText className='text-black text-lg font-bold'>
+            <ButtonText className='text-white text-lg font-bold'>
               →
             </ButtonText>
           </NextButton>

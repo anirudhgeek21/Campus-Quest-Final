@@ -4,6 +4,7 @@ import Navbar from "../Navigation/Navbar.jsx";
 import TopName from "../TopName/TopName.jsx";
 import Greeting from "./greeting/Greeting.jsx";
 import ProfileInfo from "./ProfileInfo.jsx";
+import Friends from "./Collection/Friends.jsx";
 import CollectionCard from "./Collection/CollectionCard.jsx";
 import CollectionOverview from "./Collection/CollectionOverview.jsx";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -31,6 +32,15 @@ const ProfileScreen = () => {
                         </View>
                         <View>
                             <ProfileInfo />
+                        </View>
+                        
+                        <View>
+                            <Friends />
+                        </View>
+                        <View>
+                            <Text className="text-purple-300 text-xs text-center font-thin mb-4 mt-4">
+                                Your Collection
+                            </Text>
                         </View>
                         <View>
                             <CollectionOverview />
