@@ -11,9 +11,8 @@ const Greeting = () =>{
     return(
         <View className="justify-around">
             
-            <MotiButton className="justify-start bg-black pt-2 ml-[-8px]">
-                <Text className="text-orange-500 text-xl font-[350] font-sans tracking-[2px] px-8">Hello,</Text>
-                <Text className="text-orange-500 text-xl font-[350] font-sans tracking-[2px] px-8 pb-4">Anirudh !</Text>
+            <MotiButton className="justify-start bg-black pt-2 ml-[-9px]">
+                <Text className="text-violet-300 text-sm font-[350] font-sans tracking-[2px] px-8">Hello, Anirudh!</Text>
             </MotiButton>
             
         </View>

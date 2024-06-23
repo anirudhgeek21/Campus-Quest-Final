@@ -3,30 +3,29 @@ import { View, TouchableOpacity } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { styled } from 'nativewind';
 import { motify } from 'moti';
+import { useNavigation } from '@react-navigation/native';
 
 const StyledButton = styled(TouchableOpacity);
-
 const MotiButton = motify(StyledButton)();
 
 const Navbar = () => {
+  const navigation = useNavigation();
   return (
     <View className="w-full">
       <View className="w-full flex-row justify-around items-center px-5 pb-3">
-        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4">
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
           <EventsIcon />
         </MotiButton>
-        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4">
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
           <PlayIcon />
         </MotiButton>
-        <View>
-          <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4">
-            <HomeIcon />
-          </MotiButton>
-        </View>
-        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4">
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
+          <HomeIcon />
+        </MotiButton>
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
           <TradingIcon />
         </MotiButton>
-        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4">
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('ProfileScreen')}>
           <ProfileIcon />
         </MotiButton>
       </View>
@@ -47,7 +46,7 @@ const PlayIcon = () => (
 );
 
 const HomeIcon = () => (
-  <Svg width="28" height="28" className="" viewBox="0 0 24 24" fill="white">
+  <Svg width="28" height="28" viewBox="0 0 24 24" fill="white">
     <Path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
   </Svg>
 );

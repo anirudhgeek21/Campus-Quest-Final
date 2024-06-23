@@ -17,7 +17,7 @@ const LandingPage = ({navigation}) => {
 
   return (
     <ImageBackground
-      source={BackgroundImage2}
+      
       style={styles.backgroundImage}
     >
       <Container className='flex-1 p-4 bg-transparent my-auto'>
@@ -37,7 +37,7 @@ const LandingPage = ({navigation}) => {
 
         <NextButton
             onPress={() => {navigation.navigate("Login")}}
-            className='bg-white p-2 mb-10 rounded-lg items-center w-[90%] mx-auto'
+            className='bg-white p-2 mb-16 rounded-lg items-center w-[80%] mx-auto'
             animate={{
               scale: 1,
               opacity: 1,
@@ -65,6 +65,7 @@ const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
   backgroundImage: {
+    backgroundColor: "#000000",
     flex: 1,
     resizeMode: 'cover',
     height: windowHeight, 

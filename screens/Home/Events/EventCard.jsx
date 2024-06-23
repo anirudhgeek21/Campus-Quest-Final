@@ -24,9 +24,15 @@ const EventCard = (prop) => {
         >
             <Text className="text-blue-100 text-center font-extrabold -tracking-[0.3px] text-xl">{prop.name}</Text>
             <View className="w-[40%] mx-auto flex flex-row justify-around mt-3">
-                <View style={{ width: 30, height: 30, backgroundColor: 'gold', borderRadius: 25 }} />
-                <View style={{ width: 30, height: 30, backgroundColor: 'silver', borderRadius: 25 }} />
-                <View style={{ width: 30, height: 30, backgroundColor: '#CD7F32', borderRadius: 25 }} />
+                <View style={{ width: 30, height: 30, backgroundColor: 'gold', borderRadius: 25 }} >
+                    <Text className="text-black font-bold text-center my-auto">2</Text>
+                </View>
+                <View style={{ width: 30, height: 30, backgroundColor: 'silver', borderRadius: 25 }}>
+                    <Text className="text-black font-bold text-center my-auto">2</Text>
+                </View>
+                <View style={{ width: 30, height: 30, backgroundColor: '#CD7F32', borderRadius: 25 }}>
+                    <Text className="text-black font-bold text-center my-auto">2</Text>
+                </View>
             </View>
             <Text className="text-white font-thin text-center mt-4">{prop.time}</Text>
             <Text className="text-white font-thin text-center mt-1 mb-2">{prop.location}</Text>

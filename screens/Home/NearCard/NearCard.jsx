@@ -24,7 +24,7 @@ const NearCard = () => {
                     className="w-24 h-24 rounded-lg"
                 />
                 <Text className="text-white absolute left-[-40px] top-[20px] transform rotate-90 font-bold text-lg">
-                    RARE
+                    RUBY
                 </Text>
             </View>
             <Text className="mt-2 text-white font-extrabold text-lg text-center">
