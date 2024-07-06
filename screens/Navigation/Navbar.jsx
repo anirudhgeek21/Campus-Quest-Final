@@ -16,13 +16,13 @@ const Navbar = () => {
         <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
           <EventsIcon />
         </MotiButton>
-        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('AR')}>
           <PlayIcon />
         </MotiButton>
         <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
           <HomeIcon />
         </MotiButton>
-        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('HomeScreen')}>
+        <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('Trade')}>
           <TradingIcon />
         </MotiButton>
         <MotiButton className="justify-center items-center p-2 pt-0 mb-5 mt-4" onPress={() => navigation.navigate('ProfileScreen')}>

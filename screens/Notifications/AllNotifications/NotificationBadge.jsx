@@ -7,7 +7,7 @@ const StyledButton = styled(TouchableOpacity);
 const MotiButton = motify(StyledButton)();
 const Container = motify(View)();
 
-const NotificationBadge = (prop) => {
+const NotificationBadge = (props) => {
     const [clicked, setClicked] = useState(false);
 
     const handleClick = () => {
@@ -17,14 +17,16 @@ const NotificationBadge = (prop) => {
     return (
         <View>
             <MotiButton
-                className={`flex flex-row justify-between ${clicked ? 'bg-black' : 'bg-gray-950'} text-white px-6 py-4 rounded-xl w-[90%] mx-auto mt-3`}
+                className={`flex flex-row justify-between bg-gray-950 px-6 py-4 rounded-xl w-[90%] mx-auto mt-3 ${clicked ? 'text-slate-500' : 'text-white'}`}
                 onPress={handleClick}
             >
                 <View className="w-[70%]">
-                    <Text className="text-white font-normal tracking-wider leading-5 my-auto">{prop.notification}</Text>
+                    <Text className={`font-normal tracking-wider leading-5 my-auto ${clicked ? 'text-slate-500' : 'text-white'}`}>
+                        {props.notification}
+                    </Text>
                 </View>
                 <View>
-                    <Text className="text-gray-500 my-auto">{prop.time}</Text>
+                    <Text className="text-gray-500 my-auto">{props.time}</Text>
                 </View>
             </MotiButton>
         </View>

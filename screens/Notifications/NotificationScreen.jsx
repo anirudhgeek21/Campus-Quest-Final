@@ -27,31 +27,37 @@ const NotificationScreen = () => {
                     <ScrollView contentContainerStyle={styles.scrollContainer}>
                         
                         <View>
-                            <NotificationBadge notification="Anmol gaur recently found a Taj Mahal card" time="2 hr ago"/>
+                            <NotificationBadge notification="Anmol gaur recently found a Taj Mahal card" time="2 min ago"/>
                         </View>
                         <View>
-                            <NotificationBadge notification="Your have a new friend request from Samarth Mishra" time="1 hr ago"/>
+                            <NotificationBadge notification="Your have a new friend request from Samarth Mishra" time="10 min ago"/>
                         </View>
                         <View>
-                            <NotificationBadge notification="We are launching a new update !" time="1 hr ago"/>
+                            <NotificationBadge notification="We are launching a new update !" time="23 min ago"/>
                         </View>
                         <View>
-                            <NotificationBadge notification="Your have a new friend request from Sashrikaa Loomba" time="58 min ago"/>
+                            <NotificationBadge notification="Your have a new friend request from Sashrikaa Loomba" time="29 min ago"/>
                         </View>
                         <View>
                             <NotificationBadge notification="Ojas recently found a Great wall of China card" time="40 min ago"/>
                         </View>
                         <View>
-                            <NotificationBadge notification="You unlocked a new achievement" time="29 min ago"/>
+                            <NotificationBadge notification="You unlocked a new achievement" time="50 min ago"/>
                         </View>
                         <View>
-                            <NotificationBadge notification="There is a rare card near you" time="24 min ago"/>
+                            <NotificationBadge notification="There is a rare card near you" time="1 hr ago"/>
                         </View>
                         <View>
-                            <NotificationBadge notification="Your have a new friend request from Anirudh" time="10 min ago"/>
+                            <NotificationBadge notification="Your have a new friend request from Anirudh" time="1 hr ago"/>
+                        </View>
+                        <View>
+                            <NotificationBadge notification="Joining bonus exclusively for you" time="1 hr ago"/>
+                        </View>
+                        <View>
+                            <NotificationBadge notification="Check your email for verification mail and a special gift from us" time="2 hr ago"/>
                         </View>
                         <View className="mb-16">
-                            <NotificationBadge notification="Hello Welcome to this wonderfull app" time="2 min ago"/>
+                            <NotificationBadge notification="Hello Welcome to this wonderfull app" time="2 hr ago"/>
                         </View>
                         
                     </ScrollView>

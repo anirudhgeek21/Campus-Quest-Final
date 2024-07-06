@@ -25,7 +25,7 @@ const LoginScreen = ({navigation}) => {
     <SafeAreaProvider>
       <SafeAreaView className="flex-1 bg-black">
       <StatusBar barStyle="light-content"/>
-    <View className="mt-[16%]">
+    <View className="mt-[24%]">
           <Text className='text-white text-4xl font-extrabold text-center  px-5'>
             Welcome to Campus Quest
           </Text>
